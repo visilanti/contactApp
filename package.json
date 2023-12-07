@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "node-module": "^2.0.0",
+    "nodemon": "^3.0.2",
+    "validator": "^13.5.2",
+    "yargs": "^16.2.0"
+  },
+  "name": "contact-app",
+  "version": "1.0.0",
+  "description": "contact app for fun",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visilanti/contactApp.git"
+  },
+  "keywords": [
+    "contactApp"
+  ],
+  "author": "silvia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/visilanti/contactApp/issues"
+  },
+  "homepage": "https://github.com/visilanti/contactApp#readme"
+}
