@@ -1,0 +1,17 @@
+
+    <% const nama = 'silvia nurrobianti'; %>
+
+    <h1>SELAMAT DATANG DI WEBSITE HELP & CARE</h1>
+    <h2>Hallo <%= nama %></h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos ut modi provident fugiat consectetur aperiam itaque saepe, veniam harum consequatur minus necessitatibus facilis animi veritatis. Alias facere ducimus suscipit soluta?</p>
+    <h4>list daftar mahasiswa</h4>
+    <% if(mahasiswa.length < 1) {%>
+    <p>Data mahasiswa masih kosong</p>
+    <%} else {%>
+    <% mahasiswa.forEach(mhs => { %>
+        <ul>
+            <li>Nama : <%= mhs.nama %></li>
+            <li>mahasiswa : <%= mhs.email %></li>
+        </ul>
+    <% }) %>
+    <% } %>
