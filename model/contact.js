@@ -9,15 +9,15 @@ const Contact = mongoose.model('Contact', {
     },
     firstName: {
         type: String,
-        required: true  
+        // required: true  
     },
     lastName: {
         type: String,
-        required: true  
+        // required: true  
     },
     jenis_kelamin: {
         type: String,
-        required: true  
+        // required: true  
     },
     noHP: {
         type: String,
@@ -28,11 +28,11 @@ const Contact = mongoose.model('Contact', {
     }, 
     alamat: {
         type: String,
-        required: true  
+        // required: true  
     },
     kategori_kontak: {
         type: String,
-        required: true 
+        // required: true 
     }
 });
 
