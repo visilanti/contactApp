@@ -50,6 +50,21 @@ const cekDuplikat = (nama) =>{
     return contacts.find((contact) => contact.nama === nama);  
 };
 
+//menghapus sebuah data
+const removeData = (nama) => {
+    const contacts = loadContact();
+    //mencari posisi index pada nama
+    const newContact = contacts.filter((contact) => contact.nama.toLowerCase() !== nama.toLowerCase());
+
+    if(contacts.length === newContact.length){
+        console.log('data tidak ditemukan');
+        return false;
+    }
+
+    fs.writeFileSync(dataPath, JSON.stringify(newContact));
+    console.log(`${nama} berhasil dihapus!`);
+};
+
 module.exports ={
-    loadContact, findContact, addContact, cekDuplikat
+    loadContact, findContact, addContact, cekDuplikat, removeData
 }

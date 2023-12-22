@@ -1,21 +1,37 @@
 <div class="container mt-3">
-    <div class="row">
+    <div class="row mx-auto p-2">
         <div class="col-md-6">
             <h2>Form Tambah Data Contact</h2>
-            <% if (typeof errors !== 'undefined') { %>
-              <div class="alert alert-danger" role="alert">
+            <% if (typeof errors !== 'undefined') { %>      
+              <div class="alret alert-danger" role="alert">
                 <ul>
                   <% errors.forEach(error => { %>
-                    <li> <%= error.msg %> </li>
+                    <li> <%= error.msg %></li>
                   <% }) %>
                 </ul>
               </div>
-            <% } %>            
+            <% } %>
 
             <form method="post" action="/contact">
+              <div class="mb-3">
+                <label for="nama" class="form-label" required>Username</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+              </div>
                 <div class="mb-3">
-                  <label for="nama" class="form-label" required>Nama</label>
-                  <input type="text" class="form-control" id="nama" name="nama" required>
+                  <label for="firstName" class="form-label" required>First Name</label>
+                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+                <div class="mb-3">
+                  <label for="lastName" class="form-label" required>Last Name</label>
+                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+                <div class="mb-3">
+                  <label>
+                    <input type="radio" name="jenis_kelamin" value="pria"> Pria
+                  </label>
+                  <label>
+                      <input type="radio" name="jenis_kelamin" value="wanita"> Wanita
+                  </label>
                 </div>
                 <div class="mb-3">
                   <label for="noHP" class="form-label" required>No HP</label>
@@ -24,6 +40,19 @@
                 <div class="mb-3">
                   <label for="email" class="form-label" required>Email</label>
                   <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="alamat" class="form-label" requires>Alamat</label>
+                  <textarea name="alamat" id="alamat" class="form-control" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="mb-3 dropdown">
+                  <label for="kategori_kontak">Pilih Kategori Kontak:</label>
+                  <select id="kategori_kontak" name="kategori_kontak">
+                      <option value="keluarga">Keluarga</option>
+                      <option value="teman">Teman</option>
+                      <option value="rekan_kerja">Rekan Kerja</option>
+                      <option value="lainnya">Lainnya</option>
+                  </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data Kontak</button>
               </form>

@@ -12,6 +12,7 @@
                 <%= msg %>
               </div>
             <% } %>
+            
             <table class="table">
                 <thead>
                   <tr>
@@ -34,12 +35,19 @@
                   <% contacts.forEach((contact, i) => { i++%>
                   <tr>
                     <th scope="row"><%= i++ %></th>
-                    <td><%= contact.nama %></td>
-                    <td><%= contact.nohp %></td>
+                    <td><%= contact.firstName %> <%= contact.lastName%></td>
+                    <td><%= contact.noHP %></td>
                     <td>
                         <a href="/contact/<%= contact.nama %>" class="badge rounded-pill btn btn-success"><i class="bi bi-info-circle"></i>
                             detail
                         </a>
+                        <!-- <a href="/delete-contact/<%= contact.nama %>" class="badge rounded-pill btn btn-danger"><i class="bi bi-trash"></i>
+                          Hapus
+                      </a> -->
+                      <form action="/contact?_method=DELETE" method="POST" class="d-inline">
+                        <input type="hidden" name="nama" value="<%= contact.nama%>">
+                        <button type="submit" class="badge rounded-pill btn btn-danger"><i class="bi bi-trash">Hapus</i></button>
+                      </form>
                     </td>
                   </tr>
                   <% }); %>

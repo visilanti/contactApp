@@ -8,7 +8,20 @@
                         <% if (contact) { %>
                             <h5 class="card-title"><%= contact.nama %></h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary"><%= contact.noHP %></h6>
+                            <p class="card-text"><%= contact.firstName %> <%= contact.lastName%></p>
                             <p class="card-text"><%= contact.email %></p>
+                            <p class="card-text"><%= contact.alamat %></p>
+                            <p class="card-text"><%= contact.kategori_kontak %></p>
+
+                            <form action="/contact?_method=PUT" method="POST" class="d-inline">
+                                <input type="hidden" name="nama" value="<%= contact.nama%>">
+                                <button type="submit" class="badge rounded-pill btn btn-success"><i class="">Update</i></button>
+                            </form>
+
+                            <form action="/contact?_method=DELETE" method="POST" class="d-inline">
+                                <input type="hidden" name="nama" value="<%= contact.nama%>">
+                                <button type="submit" class="badge rounded-pill btn btn-danger"><i class="bi bi-trash">Hapus</i></button>
+                            </form>
                         <% } else { %>
                             <div class="alert alert-danger fw-bold" role="alert">
                                 &laquo; Kembali ke daftar contact
