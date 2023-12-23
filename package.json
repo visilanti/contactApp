@@ -20,7 +20,7 @@
   "name": "contact-app",
   "version": "1.0.0",
   "description": "contact app for fun",
-  "main": "app.js",
+  "main": "index.js",
   "engine" : {
     "node" : "14.x"
   },
