@@ -21,7 +21,7 @@
   "version": "1.0.0",
   "description": "contact app for fun",
   "main": "index.js",
-  "type" : "module",
+  "type" : "commonjs",
   "engine" : {
     "node" : "14.x"
   },
